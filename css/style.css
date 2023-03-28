@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,700&family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #ff0000;
+  --darker-color-0: #000;
+  --darker-color-1: #111;
+  --darker-color-2: #222;
+  --color-text: rgba(255, 255, 255, 0.8);
+}
+
+.tema-claro {
+  --primary-color: #00ff00;
+  --darker-color-0: #fff;
+  --darker-color-1: #eee;
+  --darker-color-2: #ddd;
+  --color-text: rgba(0, 0, 0, 0.8);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--darker-color-0);
+  
+}
+
+/*Header*/
+header {
+  background-color: var(--darker-color-0);
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+}
+
+.header-container {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container img {
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.header-container img:hover,
+.header-container i:hover {
+  transform: scale(1.1);
+}
+
+.header-container i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.header-container nav ul {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  left: 50%;
+  top: 90px;
+  transform: translate(-50%);
+  width: 90%;
+  max-width: 1080px;
+  padding: 15px;
+  list-style: none;
+  z-index: 999;
+  border-bottom: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color);
+  padding: 50px 0;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background-color: var(--darker-color-0);
+  background-image: url(./../assets/bg-pattern-circles.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-container nav ul li {
+  min-width: 200px;
+  width: 20%;
+  background-color: var(--primary-color);
+  opacity: 0.8;
+  text-align: left;
+  padding: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-container nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-text)
+}
+
+/*Main*/
+
+/*Hero*/
+.hero {
+  padding: 100px 10px 50px 10px;
+  background-image: linear-gradient(135deg, var(--darker-color-1) 50%, var(--darker-color-2) 50%);
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100px;
+  margin: 75px 0 20px 30px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+
+}
+
+.hero-content-text {
+  color: var(--color-text);
+}
+
+.hero-content-text h1 {
+  font-size: 2rem;
+}
+
+.hero-content-text h3 {
+  font-size: 1.5rem;
+}
+
+.hero-content-text h3 span::before {
+  content: 'João Victor!';
+  position: absolute;
+  width: 0;
+  white-space: nowrap;
+  color: var(--primary-color);
+  overflow: hidden;
+  animation: nome 3s infinite;
+}
+
+.hero-content-perfil {
+  width: 100%;
+  max-width: 300px;
+  height: calc(100vw - 20px);
+  max-height: 300px;
+  background-image: url(./../assets/perfil.jpg);
+  position: center;
+  background-size: cover;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: 3px 3px 6px var(--primary-color);
+  animation: perfil 6s infinite;
+}
+
+/*Sobre*/
+.sobre{
+  background-image: linear-gradient(45deg, var(--darker-color-1) 50%, var(--darker-color-2) 50%);
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  margin: 20px 30px 20px 0;
+}
+
+.sobre-content{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  gap: 25px;
+  padding: 100px 20px ;
+}
+
+.sobre-content-text{
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sobre-content-text h1{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.sobre-content-text .line{
+  height: 3px;
+  width: 100px;
+  background-color: var(--primary-color);
+}
+
+.sobre-content p{
+  max-width: calc(1080px * 0.5);
+  color: var(--color-text);
+  text-align: justify;
+}
+
+@keyframes nome {
+  50% {
+    width: 200px;
+  }
+}
+
+@keyframes perfil {
+  50% {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-image: url(./../assets/perfil-2.png);
+  }
+}
+
+@media screen and (max-width:500px) {
+  html {
+    font-size: 14px;
+  }
+  .hero{
+    margin: 75px 0 20px 10px;
+  }
+  .sobre{
+    margin: 20px 10px 20px 0;
+  }
+}

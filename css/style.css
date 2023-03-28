@@ -256,7 +256,7 @@ header {
 .container-card-img{
   width: 200px;
   height: 200px;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-top-left-radius: 50%;
@@ -288,9 +288,16 @@ header {
   color: var(--primary-color);
 }
 
-.container-card-tecnologias img{
-  width: 32px;
-  height: 32px;
+.container-card-tecnologias{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.container-card-tecnologias p{
+  color: var(--primary-color);
 }
 
 @keyframes perfil {
